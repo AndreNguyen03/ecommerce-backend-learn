@@ -20,8 +20,8 @@ app.use(
 );
 //init db
 import "./dbs/init.mongodb.js";
-import check from "./helpers/check.connect.js";
-check.checkOverLoad();
+// import check from "./helpers/check.connect.js";
+// check.checkOverLoad();
 
 // init routes
 app.use("/", router);
