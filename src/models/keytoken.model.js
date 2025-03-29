@@ -27,6 +27,7 @@ var keyTokenSchema = new Schema(
     },
   },
   {
+    //toi bi ngu
     collection: COLLECTION_NAME,
     timestamps: true,
   }
