@@ -26,7 +26,6 @@ check.checkOverLoad();
 // init routes
 app.use("/", router);
 
-// Test Pull Request!!
 
 // handling error
 app.use((req, res, next) => {
