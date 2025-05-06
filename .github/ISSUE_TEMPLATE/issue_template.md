@@ -1,4 +1,3 @@
-blank_issues_enabled: false
 name: Feature Issue
 about: Report an issue related to a specific feature
 title: '[Feature] '
