@@ -1,14 +1,50 @@
-# Hướng dẫn tạo issue
+QUY UOC CHO 
 
-Để bot tự động gán người phụ trách, bạn **phải** tạo issue theo template `Feature Issue`. Yêu cầu:
+Issue template:
+[Tiêu đề]
 
-1. **Chọn Feature**: Sử dụng dropdown để chọn feature (Login, Payment, Cart).
-2. **Mô tả chi tiết**: Cung cấp thông tin về vấn đề.
-3. **Không chỉnh sửa template**: Issue không đúng định dạng sẽ bị đóng tự động.
+## Mô tả
+[Mô tả chi tiết về vấn đề]
 
-**Hậu quả**: Nếu không tuân theo template, bot sẽ đóng issue và yêu cầu tạo lại.
+## Bước tái hiện
+1. [Bước 1]
+2. [Bước 2]
+3. [Bước 3]
 
-**Ví dụ issue hợp lệ**:
-- Tiêu đề: [Feature] Login button fails
-- Feature: Login (chọn từ dropdown)
-- Mô tả: Login page crashes when submitting invalid credentials.
+## Hành vi hiện tại
+[Mô tả hiện tượng đang xảy ra]
+
+## Hành vi mong muốn
+[Mô tả kết quả mong đợi]
+
+## Thông tin bổ sung
+- Môi trường: [Development/Staging/Production]
+- Tính năng: [Feature A, B]
+
+
+## Ảnh chụp màn hình
+[Nếu có]
+
+
+
+PULL REQUEST
+
+## Mục đích
+[Mô tả ngắn gọn về mục tiêu của PR]
+
+## Ảnh chụp/Video minh họa
+[Nếu có thay đổi UI/UX]
+
+## Kiểm thử
+- [x] Unit tests đã được thêm/cập nhật
+- [x] Đã test trên môi trường local
+- [x] Đã kiểm tra compatibility với các trình duyệt khác nhau
+
+## Checklist
+- [x] Code tuân thủ style guide của dự án
+- [x] Documentation đã được cập nhật
+- [x] Không có conflicts với branch gốc
+- [x] PR có kích thước hợp lý (<500 dòng thay đổi)
+
+## Lưu ý cho reviewer
+[Bất kỳ thông tin nào người review cần lưu ý]
