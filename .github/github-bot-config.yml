@@ -1,0 +1,69 @@
+# Cấu hình bot GitHub
+# File này định nghĩa hành vi của bot, được tạo từ các tùy chọn trên UI
+
+# Cấu hình chung
+enabled: true # Bật/tắt bot (true/false)
+
+# Tính năng Welcome Comment cho Issues
+welcome_comment:
+  enabled: true # Bật/tắt tính năng
+  issue:
+    enabled: true # Bật/tắt tính năng cho Issues
+    message: "Welcome to our repository! Please check the guidelines." # Nội dung bình luận chào mừng
+  pull_request:
+    enabled: true # Bật/tắt tính năng cho Pull Requests
+    message: "Welcome to our repository! Please check the guidelines." # Nội dung bình luận chào mừng
+
+# Tính năng AI Auto Label cho Issues và PR
+auto_label:
+  enabled: true # Bật/tắt tính năng
+  ai_model: "grok" # Mô hình AI sử dụng (ví dụ: grok, openai)
+  issue:
+    enabled: true # Bật/tắt auto_label cho Issues
+    labels: # Danh sách nhãn cho Issues
+      - bug
+      - feature-request
+      - question
+      - urgent
+  pull_request:
+    enabled: true # Bật/tắt auto_label cho Pull Requests
+    labels: # Danh sách nhãn cho PRs
+      - fix
+      - enhancement
+      - documentation
+      - needs-review
+
+# Tính năng Phân công tự động (chuẩn bị cho tương lai)
+auto_assign:
+  enabled: true # Bật/tắt tính năng
+
+# Tính năng Thông báo Discord (chuẩn bị cho tương lai)
+discord_notifications:
+  enabled: true # Bật/tắt tính năng
+  webhook_url: "https://discord.com/api/webhooks/1369226080900350002/rXVLaI9eiZrvyQ7T9f2D_E5pVZFyQQK2PYR29x0KQj3Bz-30EIFiXZ431UVsMnoXVJ5r" # URL webhook Discord
+  events: # Sự kiện muốn nhận thông báo
+    - issue.opened
+    - issue.commented
+    - pull_request.opened
+    - pull_request.merged
+
+# Tính năng Tóm tắt PR bằng AI (chuẩn bị cho tương lai)
+pr_summary:
+  enabled: true # Bật/tắt tính năng
+  ai_model: "grok" # Mô hình AI sử dụng
+  max_length: 200 # Độ dài tối đa của tóm tắt (ký tự)
+
+#Tính năng scan nội dung issue và pr
+scan:
+  enabled: true # Bật/tắt tính năng
+  issue:
+    enabled: true # Bật/tắt tính năng cho Issues
+    prompt: "Hãy kiểm tra xem issue này có tuân thủ đúng template sau không:\n---\n##Tiêu đề [Tiêu đề mô tả sơ lược về issue]\n## Mô tả\n## Bước tái hiện\n## Hành vi hiện tại\n## Hành vi mong muốn\n## Thông tin bổ sung\n## Ảnh chụp màn hình"
+  pull_request:
+    enabled: true # Bật/tắt tính năng cho Pull Requests
+    prompt: "Hãy kiểm tra xem pull request này có tuân thủ đúng template sau không:\n---\n##Tiêu đề \n## Mục đích \n## Kiểm thử\n- Ví dụ: [x] Unit tests đã được thêm/cập nhật\n## Checklist\n ví dụ- [x] Code tuân thủ style guide của dự án \n## Lưu ý cho reviewer\n[Bất kỳ thông tin nào người review cần lưu ý]"
+
+
+ai_pr_review_while_labeled:
+  enabled: true
+  label: ai-review
